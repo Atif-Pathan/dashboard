@@ -1,4 +1,4 @@
-/* Add come CSS normalize/reset mainly taken from Josh Comeau --> https://www.joshwcomeau.com/css/custom-css-reset */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Slab:wght@100..900&display=swap');/* Add come CSS normalize/reset mainly taken from Josh Comeau --> https://www.joshwcomeau.com/css/custom-css-reset */
 
 /*
     1. Use a more-intuitive box-sizing model.
@@ -113,38 +113,73 @@ ol[role="list"], ul[role="list"] {
 
 .main-content {
     grid-area: main;
-    background-color: #ececea;
+    background-color: #d3d3d3;
     display: grid;
     grid-template-rows: 1fr 1.8fr;
 }
 
 .upper-dash {
-    /* background-color: royalblue; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1.5fr;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 1.5rem;
+    padding: 1.5rem;
 }
 
 .greeting, .upper-card, .lower-card {
     border-radius: 10px;
     background-color: white;
-    padding: 0.5rem;
+    padding: 0rem 1rem 0rem 1rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
 }
 
 .greeting {
     grid-column: 1/5;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.left-greet {
+    grid-column: 1/4;
+    /* background-color: lightcoral; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.left-greet h1 {
+    font-family: "Lora", system-ui, 'Open Sans';
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.left-greet h3 {
+    font-family: "Roboto Slab", "Open Sans", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    line-height: 1.15;
+}
+
+.right-greet {
+    grid-column: 6/8;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.upper-card {
+    position: relative;
 }
 
 .lower-dash {
-    /* background-color: rosybrown; */
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 1fr 1fr;
-    gap: 2rem;
-    padding: 0 2rem 2rem 2rem;
+    gap: 1.5rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
 .lower-card:nth-child(1) {

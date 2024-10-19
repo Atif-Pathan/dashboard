@@ -137,6 +137,7 @@ ol[role="list"], ul[role="list"] {
     grid-column: 1/5;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    align-items: center;
 }
 
 .left-greet {
@@ -146,6 +147,7 @@ ol[role="list"], ul[role="list"] {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    height: fit-content;
 }
 
 .left-greet h1 {
@@ -164,10 +166,81 @@ ol[role="list"], ul[role="list"] {
 
 .right-greet {
     grid-column: 6/8;
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 1rem;
+    height: fit-content;
+}
+
+.dropdown-menu {
+    position: relative;
+}
+
+.dropdown {
+    background-color: #060606;
+    color: white;
+    padding: 0.5rem 0.5rem;
+    /* border-radius: 5rem; */
+    border-radius: 100vh;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    font-family: "Lora", system-ui, 'Open Sans';
+    font-size: 1.2rem;
+    font-weight: 100;
+    width: 9rem;
+}
+
+.dropdown-btn {
+    background-image: url('assets/icons/down.svg');
+    background-color: white;
+    background-size:contain;
+    background-position: center center;
+    border: none;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 1.8rem;
+    /* border-radius: 10rem; */
+    border-radius: 100vh;
+}
+
+.dropdown-options {
+    position: absolute;
+    top: 2.8rem;
+    left: 0.5rem;
+    z-index: 1;
+    font-family: "Lora", system-ui, 'Open Sans';
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 90%;
+}
+
+.dropdown-options {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+
+.dropdown-options ul {
+    list-style-type: none;
+    padding: 0;
+    background-color:rgb(163, 252, 74);
+    display: flex;
+    flex-direction: column;
+    padding: 0.2rem 0 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.dropdown-options ul li button {
+    border: none;
+    padding: 0;
+    background-color: rgb(163, 252, 74);
+}
+
+.dropdown-options ul li button:hover {
+    background-color: rgb(126, 192, 59);
 }
 
 .upper-card {

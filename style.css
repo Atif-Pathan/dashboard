@@ -287,7 +287,6 @@ ol[role="list"], ul[role="list"] {
     position: relative;
 }
 
-
 .search-submit img {
     position: absolute;
     top: 50%;
@@ -346,6 +345,31 @@ ol[role="list"], ul[role="list"] {
 
 .upper-card {
     position: relative;
+    padding: 1rem 1rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.card-number {
+    font-family: "Lora", system-ui, 'Open Sans';
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.upper-card .fit-icon {
+    position: absolute;
+    top: 15%;
+    right: 7%;
+    /* transform: translate(-20%, -90%); */
+    width: 3.5rem;
+    background-color: transparent;
+}
+
+.upper-card #heart-icon {
+    transform: translateX(-5%);
 }
 
 .lower-dash {

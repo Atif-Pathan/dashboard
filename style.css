@@ -121,7 +121,7 @@ ol[role="list"], ul[role="list"] {
 .upper-dash {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1.5fr;
+    grid-template-rows: 1fr 2fr;
     gap: 1.5rem;
     padding: 1.5rem;
 }
@@ -136,7 +136,7 @@ ol[role="list"], ul[role="list"] {
 .greeting {
     grid-column: 1/5;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     align-items: center;
 }
 
@@ -152,9 +152,9 @@ ol[role="list"], ul[role="list"] {
 
 .left-greet h1 {
     font-family: "Lora", system-ui, 'Open Sans';
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     font-weight: 700;
-    line-height: 1.25;
+    line-height: 1.15;
 }
 
 .left-greet h3 {
@@ -165,7 +165,7 @@ ol[role="list"], ul[role="list"] {
 }
 
 .right-greet {
-    grid-column: 4/8;
+    grid-column: 4/10;
     /* background-color: lightgreen; */
     display: flex;
     justify-content: flex-end;
@@ -322,11 +322,26 @@ ol[role="list"], ul[role="list"] {
 .notification {
     border: 2px solid #c0c0c0;
     border-radius: 100vh;
-    background-color: #a3fc4a;
+    background-color: white;
+    display: flex;
+}
+
+.notification-btn {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    border-radius: 100vh;
+    padding: 0.5rem;
+}
+
+.notification-btn:active {
+    -webkit-box-shadow: inset 0 0 5px #777777b0;
+    -moz-box-shadow:    inset 0 0 5px #777777b0;
+    box-shadow:         inset 0 0 5px #777777b0;
 }
 
 .notification-icon {
-    width: 2rem;
+    width: 1.5rem;
 }
 
 .upper-card {

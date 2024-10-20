@@ -9,15 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let search_bar_input = document.querySelector(".search_bar_input");
     const search_button = document.querySelector(".search-submit");
     let search_icon_image = document.getElementById("search-icon");
-
-    // dropdown_btn.addEventListener("click", function() {
-    //     console.log(drop_menu.style.visibility);
-    //     if (drop_menu.style.visibility === 'hidden') {
-    //         drop_menu.style.visibility = 'visible';
-    //     } else {
-    //         drop_menu.style.visibility = 'hidden';
-    //     }
-    // });
+    const notif_btn = document.querySelector(".notification-btn");
+    let notif_icon = document.querySelector(".notification-icon");
+    let new_notif = true;
 
     dropdown_btn.addEventListener("click", function() {
         if (drop_menu.style.height === '0px' || drop_menu.style.height === '') {
@@ -69,4 +63,18 @@ document.addEventListener('DOMContentLoaded', function() {
             search_button.blur();
         }, 100);
     })
+
+    notif_btn.addEventListener("click", function() {
+        if (new_notif) {
+            notif_icon.setAttribute("src", "assets/icons/notification_icon_grey.svg");
+            notif_icon.setAttribute("title", "No new notifications");
+            new_notif = false;
+            setTimeout(() => {
+                notif_icon.setAttribute("src", "assets/icons/notification_icon_green.svg");
+                notif_icon.setAttribute("title", "New Notification!");
+                new_notif = true;
+            }, 15000)
+        }
+    })
+
 });

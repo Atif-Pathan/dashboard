@@ -165,7 +165,7 @@ ol[role="list"], ul[role="list"] {
 }
 
 .right-greet {
-    grid-column: 6/8;
+    grid-column: 4/8;
     /* background-color: lightgreen; */
     display: flex;
     justify-content: flex-end;
@@ -208,11 +208,10 @@ ol[role="list"], ul[role="list"] {
 
 .dropdown-options {
     position: absolute;
-    top: 2.8rem;
     left: 0.5rem;
     z-index: 1;
     font-family: "Lora", system-ui, 'Open Sans';
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
     width: 90%;
 }
@@ -225,22 +224,91 @@ ol[role="list"], ul[role="list"] {
 
 .dropdown-options ul {
     list-style-type: none;
-    padding: 0;
     background-color:rgb(163, 252, 74);
     display: flex;
     flex-direction: column;
-    padding: 0.2rem 0 0.2rem 0.5rem;
+    padding: 0.4rem 0 0.4rem 0.6rem;
     border-radius: 0.5rem;
+    gap: 0.2rem;
+    justify-content: center;
 }
 
 .dropdown-options ul li button {
     border: none;
-    padding: 0;
+    padding: 0 0.5rem;
     background-color: rgb(163, 252, 74);
 }
 
 .dropdown-options ul li button:hover {
     background-color: rgb(126, 192, 59);
+}
+
+.search-bar {
+    display: flex;
+    border: 2px solid #c0c0c0;
+    overflow: hidden;
+    height: 2.8rem;
+    align-items: center;
+    border-radius: 100vh;
+    padding: 0 0.2rem 0 0;
+    width: 2.8rem;
+    position: relative;
+    transition: width 350ms ease-in-out;
+}
+
+.search_bar_input {
+    min-width: 15rem;
+    flex-grow: 1;
+    font-size: 1.2rem;
+    padding: 0 0 0 0.8rem;
+    border: 0;
+    z-index: 2;
+    font-weight: 400;
+    font-family: "Roboto Slab", "Open Sans", sans-serif;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.search-submit {
+    padding: 0.3rem;
+    flex-shrink: 0;
+    height: 2.2rem;
+    width: 2.2rem;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    border-radius: 100vh;
+    margin-left: auto;
+    position: relative;
+}
+
+
+.search-submit img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.2rem;
+}
+
+.search_bar_input:focus {
+    outline: 0;
+}
+
+.search-bar:focus-within {
+    width: 19rem;
+
+    .search_bar_input {
+        opacity: 1;
+        z-index: 0;
+    }
+
+    .search-submit {
+        background-color: black;
+    }
 }
 
 .upper-card {

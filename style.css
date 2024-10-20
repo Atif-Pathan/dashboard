@@ -224,7 +224,7 @@ ol[role="list"], ul[role="list"] {
 
 .dropdown-options ul {
     list-style-type: none;
-    background-color:rgb(163, 252, 74);
+    background-color:#a3fc4a;
     display: flex;
     flex-direction: column;
     padding: 0.4rem 0 0.4rem 0.6rem;
@@ -241,6 +241,7 @@ ol[role="list"], ul[role="list"] {
 
 .dropdown-options ul li button:hover {
     background-color: rgb(126, 192, 59);
+    cursor: pointer;
 }
 
 .search-bar {
@@ -253,7 +254,7 @@ ol[role="list"], ul[role="list"] {
     padding: 0 0.2rem 0 0;
     width: 2.8rem;
     position: relative;
-    transition: width 350ms ease-in-out;
+    transition: width 500ms cubic-bezier(0.18, 0.89, 0.72, 1.26);
 }
 
 .search_bar_input {
@@ -270,6 +271,7 @@ ol[role="list"], ul[role="list"] {
     bottom: 0;
     left: 0;
     opacity: 0;
+    cursor: pointer;
 }
 
 .search-submit {
@@ -304,11 +306,27 @@ ol[role="list"], ul[role="list"] {
     .search_bar_input {
         opacity: 1;
         z-index: 0;
+        cursor: initial;
     }
 
     .search-submit {
+        /* background-color: rgb(131, 212, 49); */
         background-color: black;
     }
+
+    .search-submit:active {
+        background-color: rgb(163, 252, 74);
+    }
+}
+
+.notification {
+    border: 2px solid #c0c0c0;
+    border-radius: 100vh;
+    background-color: #a3fc4a;
+}
+
+.notification-icon {
+    width: 2rem;
 }
 
 .upper-card {

@@ -115,13 +115,13 @@ ol[role="list"], ul[role="list"] {
     grid-area: main;
     background-color: #d3d3d3;
     display: grid;
-    grid-template-rows: 1fr 1.8fr;
+    grid-template-rows: 1fr 2.2fr;
 }
 
 .upper-dash {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 1.4fr;
     gap: 1.5rem;
     padding: 1.5rem;
 }
@@ -345,18 +345,24 @@ ol[role="list"], ul[role="list"] {
 
 .upper-card {
     position: relative;
-    padding: 1rem 1rem 1rem 2rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 0.3rem;
     align-items: flex-start;
 }
 
 .card-number {
     font-family: "Lora", system-ui, 'Open Sans';
-    font-size: 4rem;
+    font-size: 2.1rem;
     font-weight: 700;
-    line-height: 1;
+    line-height: 0.8;
+}
+
+.card-text {
+ font-family: "Roboto Slab", "Open Sans", sans-serif;
+ font-size: 0.9rem;
 }
 
 .upper-card .fit-icon {
@@ -364,7 +370,7 @@ ol[role="list"], ul[role="list"] {
     top: 15%;
     right: 7%;
     /* transform: translate(-20%, -90%); */
-    width: 3.5rem;
+    width: 3rem;
     background-color: transparent;
 }
 
@@ -380,6 +386,38 @@ ol[role="list"], ul[role="list"] {
     padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
+.lower-card {
+    position: relative;
+    padding: 2.6rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto Slab", "Open Sans", sans-serif;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+.lower-card .heading {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    font-family: "Lora", system-ui, 'Open Sans';
+    font-size: 1.15rem;
+    font-weight: 900;
+}
+
+.lower-card h4 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #9c9c9c;
+    line-height: 1.5;
+}
+
+.lower-card h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
 .lower-card:nth-child(1) {
     grid-column: 1/9;
 }
@@ -390,6 +428,27 @@ ol[role="list"], ul[role="list"] {
 
 .lower-card:nth-child(3) {
     grid-column: 1/4;
+    background-image: linear-gradient(
+        180deg,
+        hsl(0deg 0% 100%) 0%,
+        hsl(76deg 100% 99%) 21%,
+        hsl(76deg 100% 98%) 32%,
+        hsl(76deg 100% 97%) 41%,
+        hsl(76deg 100% 95%) 49%,
+        hsl(76deg 100% 94%) 56%,
+        hsl(75deg 100% 93%) 63%,
+        hsl(75deg 100% 92%) 69%,
+        hsl(75deg 100% 90%) 75%,
+        hsl(75deg 100% 89%) 82%,
+        hsl(75deg 100% 87%) 88%,
+        hsl(74deg 100% 86%) 94%,
+        hsl(74deg 100% 84%) 100%
+    );
+}
+
+.upgrade-img {
+    width: fit-content;
+    cursor: pointer;
 }
 
 .lower-card:nth-child(4) {

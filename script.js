@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const notif_btn = document.querySelector(".notification-btn");
     let notif_icon = document.querySelector(".notification-icon");
     let new_notif = true;
+    let upgrade_img = document.querySelector(".upgrade-img");
 
     dropdown_btn.addEventListener("click", function() {
         if (drop_menu.style.height === '0px' || drop_menu.style.height === '') {
@@ -75,6 +76,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 new_notif = true;
             }, 15000)
         }
+    })
+
+    upgrade_img.addEventListener("mousedown", function() {
+        upgrade_img.setAttribute("src", "assets/icons/upgrade_pressed_crop.svg")
+    })
+
+    upgrade_img.addEventListener("mouseup", function() {
+        upgrade_img.setAttribute("src", "assets/icons/upgrade_init_crop.svg")
     })
 
 });

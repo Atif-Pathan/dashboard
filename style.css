@@ -406,14 +406,14 @@ ol[role="list"], ul[role="list"] {
 }
 
 .lower-card h4 {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 400;
     color: #9c9c9c;
     line-height: 1.5;
 }
 
 .lower-card h5 {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 400;
     line-height: 1.2;
 }
@@ -453,6 +453,36 @@ ol[role="list"], ul[role="list"] {
 
 .lower-card:nth-child(4) {
     grid-column: 4/9;
+}
+
+.heading-line {
+    position: relative;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    padding: 0 0 0.5rem 0;
+}
+
+.line-btns {
+    position: absolute;
+    right: 3px;
+    top: 0.5rem;
+    bottom: 0;
+    border-radius: 100vh;
+    width: 8rem;
+    height: 1.9rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 3px 3px 2px rgba(112, 112, 112, 0.8);
+}
+
+.line-btns:active { 
+    background-color: rgb(163, 252, 74);
+    color: black;
+    box-shadow: none;
+    transform: translate(3px, 3px);
 }
 
 .lower-card:nth-child(5) {

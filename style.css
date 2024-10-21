@@ -389,11 +389,9 @@ ol[role="list"], ul[role="list"] {
 .lower-card {
     position: relative;
     padding: 2.6rem 1rem 1rem 1rem;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     font-family: "Roboto Slab", "Open Sans", sans-serif;
-    /* align-items: center; */
-    justify-content: space-between;
+    align-items: center;
 }
 
 .lower-card .heading {
@@ -406,14 +404,14 @@ ol[role="list"], ul[role="list"] {
 }
 
 .lower-card h4 {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 400;
     color: #9c9c9c;
     line-height: 1.5;
 }
 
 .lower-card h5 {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 400;
     line-height: 1.2;
 }
@@ -428,6 +426,7 @@ ol[role="list"], ul[role="list"] {
 
 .lower-card:nth-child(3) {
     grid-column: 1/4;
+    grid-template-rows: 0.3fr 1fr;
     background-image: linear-gradient(
         180deg,
         hsl(0deg 0% 100%) 0%,
@@ -453,22 +452,28 @@ ol[role="list"], ul[role="list"] {
 
 .lower-card:nth-child(4) {
     grid-column: 4/9;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .heading-line {
     position: relative;
     border-bottom: 1px solid rgb(199, 199, 199);
-    padding: 0 0 0.5rem 0;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.plans {
+    border-bottom: 1px solid transparent;
+    /* padding-bottom: 0; */
 }
 
 .line-btns {
     position: absolute;
     right: 3px;
-    top: 0.5rem;
+    top: 0.6rem;
     bottom: 0;
     border-radius: 100vh;
     width: 8rem;
-    height: 1.9rem;
+    height: 2rem;
     font-size: 0.9rem;
     font-weight: bold;
     background-color: black;
@@ -487,6 +492,7 @@ ol[role="list"], ul[role="list"] {
 
 .lower-card:nth-child(5) {
     grid-column: 9/13;
+    grid-template-rows: 1fr 1fr;
 }
 
 .secondary-content {

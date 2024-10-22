@@ -13,7 +13,20 @@ document.addEventListener('DOMContentLoaded', function() {
     let notif_icon = document.querySelector(".notification-icon");
     let new_notif = true;
     let upgrade_img = document.querySelector(".upgrade-img");
+    let prog_bar_one = document.querySelector(".bar1");
+    let prog_bar_two = document.querySelector(".bar2");
+    let prog_bar_three = document.querySelector(".bar3");
 
+    function getRandomInt(min, max) {
+        const minCeiled = Math.ceil(min);
+        const maxFloored = Math.floor(max);
+        return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+    }
+
+    prog_bar_one.style.width = `${getRandomInt(70,90)}%`;
+    prog_bar_two.style.width = `${getRandomInt(45,75)}%`;
+    prog_bar_three.style.width = `${getRandomInt(50,80)}%`;
+    
     dropdown_btn.addEventListener("click", function() {
         if (drop_menu.style.height === '0px' || drop_menu.style.height === '') {
             drop_menu.style.height = drop_menu.scrollHeight + 'px'; // Smoothly expand to full height

@@ -399,7 +399,7 @@ ol[role="list"], ul[role="list"] {
     top: 0.5rem;
     left: 1rem;
     font-family: "Lora", system-ui, 'Open Sans';
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 900;
 }
 
@@ -502,10 +502,6 @@ ol[role="list"], ul[role="list"] {
     padding: 0.5rem 0 0.5rem 0;
 }
 
-.plans {
-    /* border-bottom: 1px solid transparent; */
-}
-
 .line-btns {
     position: absolute;
     right: 3px;
@@ -551,6 +547,7 @@ ol[role="list"], ul[role="list"] {
 
 .secondary-content {
     grid-area: second;
+    padding: 0 1.7rem;
     background-color: white;
     display: grid;
     grid-template-rows: repeat(24, 1fr);
@@ -559,13 +556,52 @@ ol[role="list"], ul[role="list"] {
 .profile-info {
     position: relative;
     background-color: lightgoldenrodyellow;
-    grid-row: span 4;
+    grid-row: span 5;
 }
 
 .calendar {
     position: relative;
-    background-color: lightblue;
-    grid-row: span 10;
+    /* background-color: lightblue; */
+    grid-row: span 9;
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+    justify-items: center;
+    padding: 1.5rem 0;
+}
+
+#calendar-months {
+    position: absolute;
+    top: 1.35rem;
+    right: 1rem;
+    font-family: "Lora", system-ui, 'Open Sans';
+    font-size: 0.95rem;
+    font-weight: 900;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+}
+
+.date-grid {
+    width: 100%;
+    padding: 0;
+    display: grid;
+    grid-row: 2/3;
+    grid-template-columns: repeat(7, 1fr);
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    font-family: "Roboto Slab", "Open Sans", sans-serif;
+}
+
+.first-day {
+    grid-column-start: 3;
+}
+
+.day-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #9c9c9c;
+    line-height: 1;
 }
 
 .video-activity {
@@ -607,16 +643,15 @@ ol[role="list"], ul[role="list"] {
 
 .trending {
     position: relative;
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
     grid-row: span 7;
-    
 }
 
 .secondary-content-heading {
     position: absolute;
-    top: 0.5rem;
+    top: 1.25rem;
     left: 1rem;
     font-family: "Lora", system-ui, 'Open Sans';
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 900;
 }

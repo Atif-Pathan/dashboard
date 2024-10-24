@@ -554,9 +554,17 @@ ol[role="list"], ul[role="list"] {
 }
 
 .profile-info {
-    position: relative;
-    background-color: lightgoldenrodyellow;
+    /* background-color: lightgoldenrodyellow; */
     grid-row: span 5;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+
+.body-metrics {
+    display: flex;
+    justify-content: space-between;
 }
 
 .calendar {
@@ -564,28 +572,39 @@ ol[role="list"], ul[role="list"] {
     /* background-color: lightblue; */
     grid-row: span 9;
     display: grid;
-    grid-template-rows: 1fr 7fr;
+    /* grid-template-rows: 1fr; */
     justify-items: center;
-    padding: 1.5rem 0;
+    padding: 1.5rem 0 0.4rem 0.15rem;
+    border-bottom: 1px solid #c0c0c0;
+    border-top: 1px solid #c0c0c0;
 }
 
 #calendar-months {
     position: absolute;
-    top: 1.35rem;
+    top: 0.65rem;
     right: 1rem;
     font-family: "Lora", system-ui, 'Open Sans';
     font-size: 0.95rem;
     font-weight: 900;
-    border: 0;
+    border: 1px solid black;
+    border-radius: 100vh;
     background-color: transparent;
     outline: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+option {
+    background-color: #c3eb57;
+    font-family: "Roboto Slab", "Open Sans", sans-serif;
+    cursor: pointer;
 }
 
 .date-grid {
     width: 100%;
-    padding: 0;
+    padding: 1rem 0 0 0;
     display: grid;
-    grid-row: 2/3;
+    /* grid-row: 2/3; */
     grid-template-columns: repeat(7, 1fr);
     list-style: none;
     text-align: center;
@@ -593,8 +612,39 @@ ol[role="list"], ul[role="list"] {
     font-family: "Roboto Slab", "Open Sans", sans-serif;
 }
 
+.date-grid li {
+    width: 2rem;
+    height: 2rem;
+    justify-self: center;
+    align-content: center;
+    cursor: pointer;
+    border-radius: 100vh;
+}
+
+.date-grid li:active {
+    background-color: #c3eb57;
+    color: black;
+}
+
+.date-grid .day-name:active:hover {
+    background-color: white;
+}
+
+.date-grid .day-name {
+    cursor: initial;
+}
+
 .first-day {
     grid-column-start: 3;
+}
+
+.olympia {
+    background-color: rgb(255, 47, 82);
+    color: white;
+}
+
+.final-prep {
+    background-color: #c3eb57;
 }
 
 .day-name {
@@ -608,6 +658,7 @@ ol[role="list"], ul[role="list"] {
     position: relative;
     grid-row: span 3;
     padding: 2.4rem 1rem 1rem 1rem;
+    border-bottom: 1px solid #c0c0c0;
 }
 
 .video-activity .progress-bar {
@@ -649,7 +700,7 @@ ol[role="list"], ul[role="list"] {
 
 .secondary-content-heading {
     position: absolute;
-    top: 1.25rem;
+    top: 0.55rem;
     left: 1rem;
     font-family: "Lora", system-ui, 'Open Sans';
     font-size: 1.1rem;

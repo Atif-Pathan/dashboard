@@ -556,15 +556,73 @@ ol[role="list"], ul[role="list"] {
 .profile-info {
     /* background-color: lightgoldenrodyellow; */
     grid-row: span 5;
-    padding: 1rem;
+    padding: 0 1rem;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    align-items: center;
+    grid-template-columns: 1fr 2fr;
+    row-gap: 1rem;
+    /* align-items: center; */
+}
+
+.name-age {
+    padding: 0 1rem;
+    align-self: flex-end;
+}
+
+.profile-pic {
+    grid-row: span 2;
+    justify-self: center;
+    align-self: center;
+    width: 8rem;
+    border-radius: 100vh;
+    border: 2px solid black;
+    transition: scale 400ms;
+}
+
+.profile-pic:hover {
+    scale: 1.2;
+    cursor: pointer;
+}
+
+.name-age h4 {
+    font-family: "Lora", system-ui, 'Open Sans';
+    font-size: 1.1rem;
+    font-weight: 700;
+    /* line-height: 1.5; */
+}
+
+.name-age h5 {
+    font-family: "Roboto Slab", "Open Sans", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #9c9c9c;
+    /* line-height: 1.5; */
+}
+
+h6 {
+    font-family: "Roboto Slab", "Open Sans", sans-serif;
+    font-weight: 500;
+    line-height: 1;
 }
 
 .body-metrics {
     display: flex;
     justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.height, .weight, .gender {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.height h5, .weight h5, .gender h5 {
+    font-family: "Roboto Slab", "Open Sans", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #929292;
+    /* line-height: 1.2; */
 }
 
 .calendar {
@@ -619,6 +677,7 @@ option {
     align-content: center;
     cursor: pointer;
     border-radius: 100vh;
+    transition: scale 300ms;
 }
 
 .date-grid li:active {
@@ -626,8 +685,18 @@ option {
     color: black;
 }
 
-.date-grid .day-name:active:hover {
+.date-grid li:hover {
+    scale: 1.4;
+}
+
+.date-grid .day-name:active {
     background-color: white;
+    color: #9c9c9c;
+}
+
+.date-grid .day-name:hover { 
+    background-color: white;
+    scale: 1;
 }
 
 .date-grid .day-name {
@@ -696,6 +765,81 @@ option {
     position: relative;
     /* background-color: lightgreen; */
     grid-row: span 7;
+    padding: 2.5rem 1rem 1rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.trending-card {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.trending-card-img {
+    border-radius: 8px;
+    height: 100%;
+    border: 2px solid white;
+}
+
+.card-body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    background-color: #b4a9ccb0;
+    backdrop-filter: blur(6px);
+    border-radius: 8px;
+    color: black;
+    padding: 0.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
+    justify-content: center;
+    transition: 700ms;
+}
+
+.trending-card:hover .card-body {
+    right: 0;
+}
+
+.card-title {
+    font-family: "Lora", system-ui, 'Open Sans';
+    font-weight: 900;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.card-content, .card-btn {
+    font-family: "Roboto Slab", "Open Sans", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    /* text-transform: capitalize; */
+}
+
+.card-btn {
+    background: rgb(0, 0, 0);
+    border: 0;
+    /* text-decoration: underline; */
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: white;
+    border-radius: 8px;
+    padding: 0.1rem 0.7rem;
+    transition: scale 400ms;
+    border: none;
+    outline: none;
+}
+
+.card-btn:hover {
+    color: #c3eb57;
+    cursor: pointer;
+    scale: 1.1;
 }
 
 .secondary-content-heading {
